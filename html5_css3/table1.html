@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: solid #333 2px;
+            width: 400px;
+        }
+
+        td,
+        th {
+            border: solid #333 1px;
+        }
+
+        caption {
+            font-weight: bolder;
+            font-size: 20px;
+            color: blue;
+        }
+
+        tbody>tr:nth-child(odd) {
+            background-color: burlywood;
+        }
+
+        thead>tr {
+            background-color: yellowgreen;
+        }
+
+        tbody>tr:nth-child(even) {
+            background-color: yellow;
+        }
+        tfoot>tr{
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>学生成绩表</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>Java语言</th>
+                <th>数据库开发</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>小李</td>
+                <td>90</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>小张</td>
+                <td>90</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>小姜</td>
+                <td>90</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>小唐</td>
+                <td>90</td>
+                <td>78</td>
+            </tr>
+            <tr>
+                <td>小王</td>
+                <td>90</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>小黄</td>
+                <td>90</td>
+                <td>78</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>均分</td>
+                <td>90</td>
+                <td>80</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

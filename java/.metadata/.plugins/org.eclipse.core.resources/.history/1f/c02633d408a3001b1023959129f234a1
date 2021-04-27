@@ -1,0 +1,13 @@
+package com.wangrui.spring_base.aop;
+
+import com.wangrui.spring_base.aop.service.PrintService;
+
+public class Main {
+
+	public static void main(String[] args) {
+		PrintService ps = new PrintService();
+		
+		ps.print();
+	}
+
+}

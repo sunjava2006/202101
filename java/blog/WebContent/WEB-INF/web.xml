@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>blog</display-name>
+ 
+  
+  <session-config>
+      <session-timeout>30</session-timeout>
+  </session-config>
+<!--   <servlet> -->
+<!--       <servlet-name>aaa</servlet-name> -->
+<!--       <servlet-class>com.wangrui.blog.servlet.Test</servlet-class> -->
+<!--       <load-on-startup>1</load-on-startup> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--       <servlet-name>aaa</servlet-name> -->
+<!--       <url-pattern>/a1</url-pattern> -->
+<!--   </servlet-mapping> -->
+    <filter>
+        <filter-name>charFilter</filter-name>
+        <filter-class>com.wangrui.blog.filter.CharcodeFilter</filter-class>
+        <init-param>
+            <param-name>char</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>charFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+
+
+</web-app>

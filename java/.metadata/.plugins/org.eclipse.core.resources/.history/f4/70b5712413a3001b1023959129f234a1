@@ -1,0 +1,5 @@
+package com.wangrui.spring_base.aop.Introduction;
+
+public class Bird {
+
+}

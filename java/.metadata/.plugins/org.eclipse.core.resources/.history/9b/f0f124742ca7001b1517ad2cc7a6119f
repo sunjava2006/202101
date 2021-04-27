@@ -1,0 +1,18 @@
+package com.wangrui.bbt.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.wangrui.bbt.beans.Goods;
+import com.wangrui.bbt.dao.GoodsDao;
+
+@Service
+public class GoodsService {
+
+	@Autowired
+	private GoodsDao goodsDao;
+	
+	public int add(Goods goods) {
+		return this.goodsDao.add(goods);
+	}
+}

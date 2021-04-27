@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+
+>
+	<context:component-scan base-package="com.wangrui.spring_base">
+	</context:component-scan>
+	
+	
+ 	<bean name="benze" class="com.wangrui.spring_base.bean2.Car" p:brand="Benze"></bean>
+	
+	<bean id="brand" class="java.lang.String">
+	   <constructor-arg index="0" value="Volvo"></constructor-arg>
+	</bean>
+	<bean name="bookName1" class="java.lang.String">
+	   <constructor-arg index="0" value="python"></constructor-arg>
+	</bean>
+	<bean name="bookName2" class="java.lang.String">
+	   <constructor-arg index="0" value="oracle"></constructor-arg>
+	</bean>
+	
+<!-- 	<bean id="service" class="com.wangrui.spring_base.bean2.Service"  -->
+<!-- 	init-method="init" destroy-method="destory"></bean> -->
+
+    <!--=================aop==================-->
+    <bean id="printService" class="com.wangrui.spring_base.aop.service.PrintService"/>
+    <bean name="timeMonitor" class="com.wangrui.spring_base.aop.service.TimeMonitor"/>
+    <aop:config proxy-target-class="true">
+        
+        <aop:aspect ref="timeMonitor">
+          <aop:pointcut 
+               expression="execution(* com.wangrui.spring_base.aop.service.PrintService.print(..))"
+               id="pc1"/> 
+          <aop:around method="monitor" pointcut-ref="pc1"/>
+          
+        </aop:aspect>
+    </aop:config>
+     
+</beans>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class People{
+
+            constructor(name){
+                this.name = name;
+            }
+
+            sayHello(){
+                document.write("hello "+ this.name);
+            }
+
+        }
+
+        var p = new People("wang");
+        p.sayHello();
+
+        class Student extends People{
+            constructor(name, sid){
+                super(name);
+                this.sid = sid;
+            }
+
+            about(){
+                document.write(this.name +","+ this.sid);
+            }
+        }
+
+        var s = new Student("Xie", "123321");
+        s.about();
+
+
+
+    </script>
+</body>
+</html>

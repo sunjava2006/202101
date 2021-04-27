@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        table{
+            border: solid gray 1px;
+            border-collapse: collapse;
+        }
+
+        td{
+            border: solid gray 1px;
+            width: 40px;
+            height: 40px;
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<table>");
+
+        var i = 1;
+        while(i<=10){
+            document.write("<tr>");
+            
+            var j = 1;
+            while(j<=10){
+                if((i+j)%2==0){
+                    document.write("<td>");
+                }else{
+                    document.write('<td class="red">');
+                }
+                
+                   
+                document.write("</td>");
+                j++;
+            }    
+                
+
+            document.write("</tr>");
+            i++;
+        }
+
+        document.write("</table>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <input type="checkbox" name="like" id="">看书
+   <input type="checkbox" name="like" id="">旅行
+   <input type="checkbox" name="like" id="">睡觉
+   <input type="checkbox" name="hobby" id="" class="a">运动
+   <input type="checkbox" name="hobby" id="" class="a">玩游戏
+
+    <button id="btnDel">全选</button>
+
+    <script>
+
+        var btnDel = document.getElementById('btnDel');
+        var inputs = document.getElementsByTagName('input'); // NodeList
+        for(var i=0; i<inputs.length; i++){
+            inputs[i].checked=true;
+        }
+
+        var likes = document.getElementsByName("like");
+        for(var i=0; i<likes.length; i++){
+            likes.item(i).checked = false;
+        }
+
+        var classa = document.getElementsByClassName('a');
+        for(var i=0; i<classa.length; i++){
+            classa[i].disabled=true;
+        }
+
+        document.querySelector('#btnDel').innerText='ok';
+        var likes = document.querySelectorAll('[name=like]');
+        for(var i=0 ; i<likes.length; i++){
+            likes[i].disabled = true;
+        }
+        
+
+    </script>
+
+</body>
+</html>

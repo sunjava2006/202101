@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .page{
+            width: 100%;
+            height: 500px;
+            border: solid red 1px;
+            display: flex;
+        }
+        .page>div{
+            border: dashed blue 1px;
+           
+        }
+        .page>div:first-child{
+            flex-grow: 0.5;
+            /* width: 100px; */
+            background-color: yellow;
+        }
+        .page>div:nth-child(2){
+            background-color: tomato;
+            flex-grow: 1;
+        }
+        .page>div:last-child{
+            /* width: 100%; */
+            flex-grow: 2;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

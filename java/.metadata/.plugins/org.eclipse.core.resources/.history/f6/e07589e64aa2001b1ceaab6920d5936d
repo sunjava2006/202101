@@ -1,0 +1,16 @@
+package com.wangrui.bbt.dao;
+
+import com.wangrui.bbt.beans.Goods;
+
+public class GoodsDao {
+
+	private static MybatisTemplate temp = new MybatisTemplate();
+	
+	public static int add(Goods g) {
+		return temp.insert(Goods.class.getName()+".add", g);
+	}
+	
+	public static Goods selectByID(int id) {
+		return temp.selectOne(Goods.class.getName()+".selectByID", id);
+	}
+}

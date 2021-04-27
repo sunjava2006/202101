@@ -1,0 +1,17 @@
+package com.wangrui.bbt.dao;
+
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.SelectKey;
+
+import com.wangrui.bbt.beans.Goods;
+
+@Mapper
+public interface GoodsDao {
+
+	@SelectKey(before = true, keyColumn = "goods_id", keyProperty = "goodsID",
+			resultType = Integer.class, statement = "select seq_goods.nextval from dual")
+	@Insert("insert into t_goods values(#{goodsID}, #{type.typeID}, #{goodsName}, #{unit}, #{price}, #{photo})")
+	public int add(Goods goods);
+	
+}

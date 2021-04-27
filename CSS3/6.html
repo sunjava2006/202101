@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>h1:nth-of-type(2){
+            color: red;
+        }
+        p:nth-last-of-type(2){
+            color: blue;
+        }
+        p:first-of-type{
+            background-color: greenyellow;
+        }
+        div>*:last-child{
+            background-color: blue;
+        }
+        p:last-of-type{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>xxx</h1>
+    <h1>yyy</h1>
+    <div>
+        <h1>html</h1>
+        <p>html.......</p>
+        <h1>CSS</h1>
+        <p>css........</p>
+        <input type="text">
+        <input type="text">
+        <h1>js</h1>
+        <p>js...............</p>
+    </div>
+    <ul>
+        <li>a</li>
+    </ul>
+    <ul>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+    </ul>
+    
+    
+</body>
+
+<style>
+    li:only-child{
+        color: tomato;
+    }
+  div>input:only-of-type{
+      background-color: red;
+  }
+
+</style>
+
+</html>

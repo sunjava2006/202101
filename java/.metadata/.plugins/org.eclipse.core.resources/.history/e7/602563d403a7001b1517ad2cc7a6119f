@@ -1,0 +1,24 @@
+package com.wangrui.bbt.beans;
+
+import java.io.Serializable;
+
+public class Type implements Serializable{
+
+	private Integer typeID;
+	private String name;
+	
+	public Integer getTypeID() {
+		return typeID;
+	}
+	public void setTypeID(Integer typeID) {
+		this.typeID = typeID;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+}

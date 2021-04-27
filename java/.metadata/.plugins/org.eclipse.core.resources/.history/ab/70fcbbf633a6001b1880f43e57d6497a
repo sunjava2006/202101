@@ -1,0 +1,18 @@
+package com.wangrui.bbt.dao;
+
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.SelectKey;
+
+import com.wangrui.bbt.beans.Type;
+
+
+@Mapper
+public interface TypeDao {
+
+	@SelectKey(before = true, keyColumn = "type_id", keyProperty = "typeID", 
+			statement = "select seq_types.nextval from dual", resultType = Integer.class)
+	@Insert(value = "insert into t_types values (#{typeID}, #{name})")
+	public int add(Type type);
+	
+}

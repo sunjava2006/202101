@@ -1,0 +1,11 @@
+package com.wangrui.bbt.dao;
+
+import junit.framework.TestCase;
+
+public class GoodsDaoTest extends TestCase {
+
+	public void testAdd() {
+		fail("Not yet implemented");
+	}
+
+}

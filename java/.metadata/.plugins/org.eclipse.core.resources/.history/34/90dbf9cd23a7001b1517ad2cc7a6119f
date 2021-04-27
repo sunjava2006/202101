@@ -1,0 +1,14 @@
+package com.wangrui.bbt.dao;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class GoodsDaoTest {
+
+	@Test
+	void testQuery() {
+		fail("Not yet implemented");
+	}
+
+}

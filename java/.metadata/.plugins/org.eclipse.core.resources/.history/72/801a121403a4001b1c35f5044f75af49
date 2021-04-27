@@ -1,0 +1,5 @@
+package com.wangrui.bbt.dao;
+
+public interface UserDao {
+
+}

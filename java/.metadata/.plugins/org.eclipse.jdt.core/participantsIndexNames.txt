@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\_git_code_workspace\202101\java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3143325655.index
+\blog\src

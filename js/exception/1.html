@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try{
+            var a;
+            document.write(a.name);
+        } catch(ex){
+            document.write("对象不存在");
+            document.write(ex);
+        }
+        
+        var xmlreq;
+        // try{
+        //     xmlreq = new XMLHttpRequest();
+        // }catch(ex){
+        //     valreq = new ActiveXObject('');
+        // }
+
+        if(XMLHttpRequest != null){
+            document.write("存在");
+        }
+        
+        xmlreq =  XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('');
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+package com.wangrui.bbt.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.wangrui.bbt.beans.Type;
+import com.wangrui.bbt.service.TypeService;
+
+@RestController
+public class TypeController {
+	
+	
+	@Autowired
+	private TypeService typeService;
+
+	@PostMapping("/addType")
+	public Map add(Type type) {
+		Map m = new HashMap();
+		int count = this.typeService.add(type);
+		if(1==count) {
+			m.put("status", "ok");
+		}else {
+			m.put("status", "noOk");
+		}
+		return m;
+	}
+}

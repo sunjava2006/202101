@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 今有物不知其数，三三数之剩二，五五数之剩三，七七数之剩二，问物几何？
+        count = 0;
+        var n = 7;
+        while(true){
+            if(n%3==2 && n%5==3 && n%7==2){
+                document.write(n);
+                document.write("<br>");
+                count++;
+                if(count==10){
+                    break;
+                }
+               
+            }
+            n++;
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.wangrui.bbt.dao.dynamic;
+
+public class GoodsSql {
+
+}

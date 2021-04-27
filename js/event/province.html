@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="province" id="province">
+
+    </select>
+
+    <select name="city" id="city">
+
+    </select>
+
+    <script>
+        
+
+        (function init(){
+            var provinces = [{name:"江苏",value:"JiangSu"},{name:"安徽",value:"AnHui"}];
+            var cities = {"JiangSu":[{name:"南京",value:"NanJing"},{name:"镇江", value:"ZhenJiang"}],
+                          "AnHui":[{name:"合肥", value:"HeiFei"},{name:"安庆", value:"AnQing"}]
+                         };
+                           
+
+            var province = document.querySelector('#province');
+            for(var i in provinces){
+                var p = provinces[i];
+                var opt = document.createElement('option');
+                opt.setAttribute("value", p.value);
+                opt.innerText=p.name;
+                province.append(opt);
+            };
+
+            function changeCity(provinceValue){
+                var cityList = cities[provinceValue];
+                var city = document.querySelector('#city');
+                while(city.hasChildNodes()){
+                    city.removeChild(city.firstChild);
+                }
+                for(var i in cityList){
+                    var opt = document.createElement("option");
+                    opt.setAttribute("value", cityList[i].value);
+                    opt.innerText = cityList[i].name;
+                    city.append(opt);
+                }
+            }
+
+            changeCity("JiangSu");
+
+            province.addEventListener("change", function(e){
+                var provinceValue = e.target.value;
+                changeCity(provinceValue);
+            }, false);
+
+        })();
+
+
+    </script>
+</body>
+</html>

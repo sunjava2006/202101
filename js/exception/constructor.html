@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        function People(name, age, gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender; 
+        }
+
+        People.prototype.work = function (){
+                document.write(this.name + "工作中.....");
+        } 
+        People.prototype.country = 'China';
+
+        var p = new People("Zhang", 33, "male");
+        var p2 = new  People("wang", 23, "female");
+
+        function getUserInfo(p1, p2, p3){
+          
+            document.write(this[p1]);
+            // document.write(this[p1] + "," + this[p2]+"," + this[p3])
+        }
+        // window.getUserInfo.call(p, "name", "gender", "age");
+
+        getUserInfo.apply(p, ["name"]);
+
+    </script>
+</body>
+</html>

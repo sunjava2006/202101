@@ -1,0 +1,21 @@
+package com.wangrui.spring_base.bean;
+
+public class People {
+
+	private Car car;
+
+	public People() {
+		
+	}
+
+	public People(Car car) {
+		this.car = car;
+	}
+
+	@Override
+	public String toString() {
+		return "People [car=" + car + "]";
+	}
+	
+	
+}

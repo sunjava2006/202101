@@ -1,0 +1,14 @@
+package com.wangrui.spring_base.aop.service;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class TimeMonitor {
+
+	@Around(value = "* com.wangrui.spring_base.aop.service.PrintService.print(..)")
+	public void monitor(ProceedingJoinPoint pjp) throws Throwable {
+		pjp.proceed();
+	}
+}

@@ -1,0 +1,14 @@
+package com.wangrui.bbt.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class UserServiceTest {
+
+	@Test
+	void testLogin() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper    
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wangrui.bbt.beans.Goods">
+ 
+    <select id="selectByID" parameterType="int">
+        
+    </select>
+ 
+    <insert id="add" parameterType="Goods">
+        <selectKey keyColumn="goods_id" keyProperty="goodsID" order="BEFORE" resultType="int">
+           select seq_goods.nextval from dual
+        </selectKey>
+        insert into t_goods(goods_id, type_id, goods_name, unit, price)
+         values (#{goodsID}, #{type.typeID}, #{name}, #{unit}, #{price})
+    </insert>
+
+</mapper>

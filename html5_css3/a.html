@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio>
+       <source src="./av/You.mp3">
+        你的浏览器太老了。
+    </audio>
+    <button id="stopBtn">stop</button>
+    <script>
+
+            var audio = document.querySelector("audio");
+            audio.play();
+
+            var btn = document.querySelector("#stopBtn");
+            btn.addEventListener("click", function(){
+                audio.pause();
+            });
+
+    </script>
+</body>
+</html>

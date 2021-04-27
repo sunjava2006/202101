@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/abc" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>用户名</td>
+                <td>
+                    <input type="text" name="userName" value="wang" >
+                </td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td>
+                    <input type="password" name="pwd" placeholder="6位数字" >
+                </td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <input type="radio" name="gender" value="male">男
+                    <input type="radio" name="gender" value="female" checked>女
+                </td>
+            </tr>
+            <tr>
+                <td>年龄</td>
+                <td>
+                    <input type="number" name="age" value="22" max="130" min="1">
+                </td>
+            </tr>
+            <tr>
+                <td>爱好</td>
+                <td>
+                    <input type="checkbox" name="like" value="reading" checked>阅读
+                    <input type="checkbox" name="like" value="travel">旅行
+                    <input type="checkbox" name="like" value="game">游戏
+                </td>
+            </tr>
+            <tr>
+                <td>学历</td>
+                <td>
+                    <select name="education" multiple>
+                        <optgroup label="高等学历">
+                            <option value="1">博士及以上</option>
+                            <option value="2">硕士</option>
+                            <option value="3" selected>大学</option>
+                        </optgroup>
+                        <optgroup label="中等学历">
+                            <option value="4">高中</option>
+                        </optgroup>
+                        
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>会员等级</td>
+                <td>
+                    <progress value="2" max="5"></progress>
+                </td>
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td>
+                    <input type="date" name="birth_date" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>照片</td>
+                <td>
+                    <input type="file" name="photo" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" value="重置" >
+                </td>
+                <td>
+                    <input type="submit" value="注册">
+                </td>
+            </tr>
+            
+        </table>
+
+
+    </form>
+</body>
+</html>

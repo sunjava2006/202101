@@ -1,0 +1,8 @@
+package com.wangrui.spring_base.bean;
+
+public class Car {
+
+	public void run() {
+		System.out.println("----------run----------");
+	}
+}

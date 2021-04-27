@@ -1,0 +1,13 @@
+package com.wangrui.spring_base.aop.Introduction;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext app = new ClassPathXmlApplicationContext("app2.xml");
+		Human h = app.getBean(Human.class);
+		System.out.println(h);
+				
+	}
+}

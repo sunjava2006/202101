@@ -1,0 +1,14 @@
+package com.wangrui.bbt;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+// SpringBoot启动器类
+@SpringBootApplication
+public class BbtmvcApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BbtmvcApplication.class, args);
+	}
+
+}

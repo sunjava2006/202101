@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: mt;
+            src: url(./css/mzd.ttf);
+        }
+        table{
+            border: solid gray 2px;
+            width: 500px;
+        }
+        td{
+            border: solid gray 1px;
+            height: 30px;
+        }
+        #b{
+            font-weight:bold;
+        }
+        #i{
+            font-style: italic;
+        }
+        #u{
+            /* text-decoration: underline; */
+            text-decoration: overline;
+        }
+        #s{
+            text-decoration: line-through;
+        }
+        #sub{
+            top:5px;
+            position: relative;
+        }
+        #sup{
+            top:-5px;
+            position: relative;
+        }
+        h1{
+            font-family: "mt";
+        }
+    </style>
+</head>
+<body>
+    <h1>标题</h1>
+    <table>
+        <tr>
+            <td><b>hello</b></td>
+            <td id="b">hello</td>
+        </tr>
+        <tr>
+            <td><i>hello</i></td>
+            <td id="i">hello</td>
+        </tr>
+        <tr>
+            <td><u>hello</u></td>
+            <td id="u">hello</td>
+        </tr>
+        <tr>
+            <td><s>hello</s></td>
+            <td id="s">hello</td>
+        </tr>
+        <tr>
+            <td>0<sub>2</sub></td>
+            <td>0 <span id="sub">2</span></td>
+        </tr>
+        <tr>
+            <td>0 <sup>2</sup></td>
+            <td>0 <span id="sup">2</span></td>
+        </tr>
+        <tr>
+            <td><tt>WXMiXMW</tt></td>
+            <td>WXMiXMW</td>
+        </tr>
+    </table>
+    <code>
+        function a(){
+            console.log('hello');
+        }
+
+    </code>
+    <address>
+        通信地址：xxxxxxx.
+
+    </address>
+
+
+    &copy;版权所有 &reg;
+    &lt; &#60;
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 一个皮球从12米高的台子落下后弹起，每次弹起的高度为落下高度的一半。
+        问几次后皮球不动了（0.001）。 -->
+
+    <script>
+
+        var h = 12;
+        var count = 0;
+
+        do{
+            count++;
+            h /= 2;
+
+        }while(h>=0.001);
+
+        document.write(" times: " + count);
+
+    </script>
+
+</body>
+</html>

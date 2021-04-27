@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spring_base/resources/app.xm&apos; to &apos;app.xml&apos;" description="Rename resource &apos;app.xm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="resources/app.xm" name="app.xml" stamp="1618984622625" updateReferences="true"/>
+</session>

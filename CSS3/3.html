@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[name]{
+            border: blue solid 1px;
+        }
+        input[name=userName]{
+            background-color: skyblue;
+        }
+        .rbr{
+            border: red solid 1px;
+        }
+        .pbg{
+            background-color: pink;
+        }
+        input[class ~= rbr]{
+            font-style: italic;
+        }
+        button[id^=btn]{
+            font-weight: bold;
+        }
+        
+        button[id|=btn]{
+            color: red;
+        }
+
+        [name$=Name]{
+            box-shadow: skyblue 5px 5px 5px;
+        }
+        input[name*=e]{
+            border: dashed red 2px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="userName" />
+    <input type="text" name="age">
+    <input type="text" class="rbr pbg" value="123">
+    
+    <button id="btn1">打开</button>
+    <button id="btn2">关闭</button>
+    <button id="btn-1">打开</button>
+    <button id="btn-2">关闭</button>
+
+    <input type="text" name="nickName">
+    <input type="text">
+
+</body>
+</html>

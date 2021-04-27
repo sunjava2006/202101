@@ -1,0 +1,8 @@
+package com.wangrui.spring_base.bean2;
+
+import org.springframework.stereotype.Component;
+
+@Component // 组件
+public class Car {
+
+}

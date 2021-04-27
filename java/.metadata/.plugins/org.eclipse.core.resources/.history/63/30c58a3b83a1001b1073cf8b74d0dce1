@@ -1,0 +1,15 @@
+package com.wangrui.bbt.beans;
+
+import java.sql.Date;
+
+public class Order {
+
+	private Integer orderID;
+	private Integer userID;
+	private Date orderDate;
+	private Integer status;
+	private Address address;
+	
+	
+	
+}

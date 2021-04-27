@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var people = new Object();
+        people.name = '小黄';
+        people.age = 19;
+        people.gender = '男';
+        
+        people.eat = function(){
+            document.write(this.name+'正在吃饭');
+        }
+        
+        
+        document.write(people.name + "<br>");
+        document.write(people.age + "<br>");
+        document.write(people.gender + "<br>");
+
+        function sum(a, b){
+            return a+b;
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+package com.wangrui.bbt.dao;
+
+import junit.framework.TestCase;
+
+public class OrderDetailDaoTest extends TestCase {
+
+	public void testSelectByID() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 100多个人排队，3人一组多1人，4人一组多两人，5人一组多3人。问有多少人？ 
+
+        
+        var p = 100;
+        while(p<=200){
+            
+            if(p%3==1 && p%4==2 && p%5==3){
+                document.write(p+ "<br>");
+                break;
+            }
+
+            p++;
+        }
+
+
+    </script>
+</body>
+</html>

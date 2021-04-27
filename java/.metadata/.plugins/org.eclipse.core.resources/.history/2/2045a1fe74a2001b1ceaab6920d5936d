@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+
+>
+
+
+   <bean id="car" class="com.wangrui.spring_base.bean.Car" scope="prototype">
+     <property name="brand" value="QQ"></property>
+     <property name="SN" value="999666999666"></property>
+   </bean>
+
+   <bean name="people" class="com.wangrui.spring_base.bean.People" autowire="default">
+     <property name="car">
+        <bean  class="com.wangrui.spring_base.bean.Car" scope="prototype">
+		     <property name="brand" value="MG"></property>
+		     <property name="SN" value="null"></property>
+		   </bean>
+     </property> 
+   </bean>
+   
+   <bean name="vwCarFactory" class="com.wangrui.spring_base.bean.CarFactory"></bean>
+   
+   <bean name="carFactyory" class="com.wangrui.spring_base.bean.AbstractCarFactory">
+<!--        <lookup-method name="create" bean="myCar"/> -->
+       <replaced-method name="create" replacer="vwCarFactory"></replaced-method>
+   </bean>
+
+</beans>

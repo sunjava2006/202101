@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var origion = [1,2,3,4,5,6,7,8];
+        var copy = [];
+
+        function clone(origioin){
+            var target=[];
+            for(var i of origion){
+                target.push(i);
+            }
+            return target;
+        }
+
+        function equals(a, b){
+            if(a.length==b.length){
+                var eq = true;
+                for(var i=0;i<a.length;i++){
+                    if(a[i] != b[i]){
+                        eq = false;
+                        break;
+                    }
+                }
+                return eq;
+            }
+            else{
+                return false;
+            }
+        }
+
+        copy =  clone(origion);
+        
+        do{
+            var a = origion.slice(0, origion.length/2);
+            var b = origion.slice(origion.length/2);
+            for(var i=0,j=0 ; i<origion.length ; i+=2,j++){
+                origion[i] = a[j];
+                origion[i+1] = b[j];
+            }
+            console.log(origion);
+        }while(!equals(origion, copy));
+        
+
+
+
+    </script>
+</body>
+</html>

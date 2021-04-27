@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 《九章算术》鸡公一值钱五，鸡母一值钱三，鸡雏三值钱一。今有百钱，欲买百鸡，各几何？
+
+     for(var w = 1; w<=20; w++){
+        for(var m =1 ; m<=33; m++){
+            for(var c = 3; c<=99; c+=3){
+                var count = w+m+c;
+                var amount = w*5 + m*3 + c/3;
+                if(count>100 || amount>100){
+                    break;
+                }
+                if(count==100 && amount==100){
+                    document.write("翁：" + w + ", 母：" + m + "雏: " + c +"<br>");
+                    break;
+                }
+            }
+        }
+     }
+
+
+    </script>
+</body>
+</html>

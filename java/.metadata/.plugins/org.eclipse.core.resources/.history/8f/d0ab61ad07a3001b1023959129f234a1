@@ -1,0 +1,19 @@
+package com.wangrui.spring_base.aop.service;
+
+public class PrintService {
+	
+	public void print() {
+		long start = System.currentTimeMillis();
+		
+		System.out.println("你好.........");
+		try {
+			Thread.sleep(20);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		long end = System.currentTimeMillis();
+		System.out.println("用时：" + (end-start)+"毫秒");
+	}
+
+}

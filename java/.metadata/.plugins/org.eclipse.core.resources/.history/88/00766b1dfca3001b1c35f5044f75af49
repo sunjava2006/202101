@@ -1,0 +1,17 @@
+package com.wangrui.bbt.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class UserController {
+
+	
+	public Map login() {
+		Map map = new HashMap();
+		map.put("status", "ok");
+		return map;
+	}
+}

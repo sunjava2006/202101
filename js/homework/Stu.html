@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(sid, name, birthDate, tel){
+            this.sid = sid;
+            this.name = name;
+            this.birthDate = birthDate;
+            this.tel = tel;
+        }
+
+        Student.prototype.study=function(subj){
+            console.log(this.name + "正在学习" + subj);
+        }
+
+        let xie = new Student(17010101, '谢连环', '1995-3-3', 123110110110);
+
+
+        class Stu{
+            constructor(sid, name, birthDate, tel){
+                this.sid = sid;
+                this.name = name;
+                this.birthDate = birthDate;
+                this.tel = tel;
+            }
+
+            study(subj){
+                console.log(this.name + "正在学习" + subj);
+            }
+       }
+
+       let fan = new Student(17010101, '小方', '1995-3-3', 123110110110);
+
+    </script>
+</body>
+</html>

@@ -55,26 +55,47 @@
                         <td rowspan="4" style="width:200px;">
                             <img v-bind:src="'/api/'+i.photo" alt="" style="width:180px;">
                         </td>
+                        <td class="name">商品名</td>
                         <td>{{i.goodsName}}</td>
-                        <td rowspan="2" style="width:100px">
-                            <button class="btn btn-danger">删除</button>
+                        <td rowspan="4" style="width:100px">
+                            <button class="btn btn-danger" v-bind:id="idx" @click="delGoods">删除</button>
+                            <br>
+                            <br>
+                            <button class="btn btn-warning" v-bind:id="idx">修改</button>
                         </td>
                     </tr>
                     <tr>
+                        <td class="name">商品类型</td>
                         <td>{{i.type.name}}</td>
                     </tr>
                     <tr>
+                        <td class="name">单位</td>
                         <td>{{i.unit}}</td>
-                        <td rowspan="2">
-                            <button class="btn btn-warning">修改</button>
-                        </td>
+                        
+                            
+                        
                     </tr>
                     <tr>
+                        <td class="name">单价</td></td>
                         <td>{{i.price}}</td>
                     </tr>
                  </tbody>
+                 
             </table>                   
-
+            <table class="tab">
+              <tfoot>
+                      <td >
+                        共{{totalCount}}个商品，共{{totalPage}}页，当前是{{currPage}}页。
+                      </td>
+                      <td >
+                          <div class="btn-group float-right" role="group" >
+                            <button type="button" class="btn btn-primary" @click="prePage" v-bind:disabled="currPage==1">上一页</button>
+                            <button type="button" class="btn btn-primary" @click="nextPage" v-bind:disabled="currPage==totalPage">下一页</button>
+                            
+                          </div>
+                      </td>
+                 </tfoot>
+            </table>
     </div>
 </template>
 
@@ -97,18 +118,41 @@ export default {
       queryMaxPrice:'',
       goodsList:[],
       currPage:0,
-      size:10,
+      size:3,
       totalCount:0,
       totalPage:0
     }
   },
   methods: {
-    query(){
-        let data = "typeID="+this.queryTypeID+
+    delGoods(e){
+        let idx = e.target.id;
+        let goods = this.goodsList[idx];
+        this.$bvModal.msgBoxConfirm('删除"'+goods.goodsName+'"吗？')
+        .then(value=>{
+          if(value){
+            this.axios.get('/api/delGoods',{params:{goodsID:goods.goodsID}})
+            .then(res => {
+                this.list(this.currPage);
+            })
+            .catch(err => {
+              console.error(err); 
+            })
+          }
+        })
+
+    },
+    prePage(){
+      this.list(this.currPage-1);
+    },
+    nextPage(){
+      this.list(this.currPage+1);
+    },
+    list(page){
+          let data = "typeID="+this.queryTypeID+
                     "&goodsName="+this.queryGoodsName+
                     "&minPrice="+this.queryMinPrice+
                     "&maxPrice="+this.queryMaxPrice+
-                    "&currPage="+1+
+                    "&currPage="+page+
                     "&size="+this.size;
         
 
@@ -123,6 +167,9 @@ export default {
         .catch(err => {
             console.error(err); 
         })
+    },
+    query(){
+        this.list(1);
     },
     selectPhoto(e) {
       this.photo = e.target.files[0];
@@ -161,3 +208,10 @@ export default {
   },
 };
 </script>
+
+<style>
+ .name{
+   width: 100px;
+   font-weight: bold;
+ }
+</style>

@@ -2,6 +2,7 @@ package com.wangrui.bbt.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -12,11 +13,13 @@ import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.cache.Cache;
 
 import com.wangrui.bbt.beans.Type;
 
 
 @Mapper
+@CacheNamespace()
 public interface TypeDao {
 
 	@SelectKey(before = true, keyColumn = "type_id", keyProperty = "typeID", 

@@ -35,7 +35,7 @@ public class GoodsSql {
 		sql.WHERE("rownum <=#{max}");
 		
 		SQL s = new SQL();
-		s.SELECT("*").FROM("("+sql.toString()+")").WHERE("ro >=#{min}");
+		s.SELECT("*").FROM("("+sql.toString()+")").WHERE("ro >#{min}");
 		sqlStr = s.toString();
 		return sqlStr;
 	}

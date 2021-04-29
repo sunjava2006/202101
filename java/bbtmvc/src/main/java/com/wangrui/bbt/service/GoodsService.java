@@ -30,4 +30,8 @@ public class GoodsService {
 	public int totalPage(double totalCount, int size) {
 		return (int)Math.ceil(totalCount/size);
 	}
+	
+	public int delByID(int id) {
+		return this.goodsDao.delByID(id);
+	}
 }

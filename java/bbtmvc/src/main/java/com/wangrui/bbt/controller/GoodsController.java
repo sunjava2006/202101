@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -79,6 +81,20 @@ public class GoodsController {
 		
 		
 		return map;
+	}
+	
+	@RequestMapping("/delGoods")
+	public Map del(@RequestParam("goodsID") int id) {
+		Map m = new HashMap();
+
+		int count = this.goodsService.delByID(id);
+		if(1==count) {
+			m.put("status", "ok");
+		}else {
+			m.put("status", "fail");
+		}
+	
+		return m;
 	}
 	
 }

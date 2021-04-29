@@ -1,0 +1,24 @@
+package com.wangrui.bbt.controller.user;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/user")
+public class PortalUserController {
+	
+	@RequestMapping("/login")
+	public Map login(String regName, String pwd, String code, HttpSession session) {
+		Map m = new HashMap();
+		
+		
+		
+		return m;
+	}
+
+}

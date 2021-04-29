@@ -3,6 +3,7 @@ package com.wangrui.bbt.dao;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.One;
@@ -40,5 +41,8 @@ public interface GoodsDao {
 	
 	@SelectProvider(value=GoodsSql.class, method = "queryGoodsCount")
 	public int queryConditionCount(Map map);
+	
+	@Delete("delete t_goods where goods_id=#{id}")
+	public int delByID(int id);
 	
 }
